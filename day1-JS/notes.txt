@@ -1,0 +1,7 @@
+ls : list files and folders present.
+cd : change directory. (only for folders)
+cd .. -> go to previous directory.
+clear : clears termianal.
+
+git add : stage changes.
+git status: check status of files, (commit ready or not)
