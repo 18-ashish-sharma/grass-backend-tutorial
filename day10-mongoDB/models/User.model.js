@@ -10,7 +10,7 @@ const UserSchema = new Schema({
 // creating model with specific schema
 const UserModel = mongoose.model('Users', UserSchema);
 // exporting model
-module.exports = {UserModel}
+module.exports = UserModel
 
 // const mongoose = require("mongoose");
 // const User = mongoose.model(
