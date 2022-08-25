@@ -34,6 +34,33 @@ app.get("/foods", async (request, response) => {
     response.status(500).send(error);
   }
 });
+// ...
+
+app.patch("/food/:id", async (request, response) => {
+  try {
+    await foodModel.findByIdAndUpdate(request.params.id, request.body);
+    await foodModel.save();
+    response.send(food);
+  } catch (error) {
+    response.status(500).send(error);
+  }
+});
+
+// ...
+// ...
+
+app.delete("/food/:id", async (request, response) => {
+  try {
+    const food = await foodModel.findByIdAndDelete(request.params.id);
+
+    if (!food) response.status(404).send("No item found");
+    response.status(200).send();
+  } catch (error) {
+    response.status(500).send(error);
+  }
+});
+
+// ...
 app.listen(PORT, function () {
   console.log("Server running on port", PORT);
 });
