@@ -1,0 +1,21 @@
+JWT - JSON web token  https://jwt.io/
+NPM - https://www.npmjs.com/package/jsonwebtoken
+
+JWT has 3 parts:
+    Header    - Algorithm and type of token : https://auth0.com/blog/json-web-token-signing-algorithms-overview/
+    Payload   - Data (encode)
+    Signature - secret (application stored) + algorithms keyword (base64)
+
+Base 64: Base64 is a binary to ASCII encoding scheme.
+        It is designed as a way to transfer binary data reliably across channels that have
+        limited support for different content types.
+        Base64 characters only use the same 64 characters that are present in most character sets.
+
+Middleware: The middleware in node. js is a function that will have all the access
+            for requesting an object, responding to an object, and moving to the next middleware
+            function in the application request-response cycle.
+
+Next:       The next function is a function in the Express router which,
+            when invoked, executes the middleware succeeding the current middleware.
+            Middleware functions can perform the following tasks: Execute any code.
+            Make changes to the request and the response objects.
