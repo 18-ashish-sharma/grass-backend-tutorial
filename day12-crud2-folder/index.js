@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const DBCONFIG = require('./db');
+const cors = require('cors')
 const GamesRoute = require('./routes/game.routes');
 const PORT = 8282;
 
@@ -8,7 +9,7 @@ const PORT = 8282;
 DBCONFIG();
 
 app.use(express.json());
-
+app.use(cors())
 app.use('/game', GamesRoute);
 
 
